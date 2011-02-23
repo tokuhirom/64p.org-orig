@@ -1,22 +1,21 @@
-* perl XS
-[2008-12-25 18:34]
+perl XS
 
 参考にするソースとして
 - Ganglia::XS(Makefile.PL がよいのと、シンプル)
 - Text::Mecab(typemap をつかった例として)
  
-■FAQ
+*FAQ
 - C++なライブラリをバインドするには
 CC =>'g++',
 をmakemaker_args に渡せばよい。
  
-■参考になるサイト
+*参考になるサイト
 typemap について
 http://mt.endeworks.jp/d-6/2006/07/perl-xs-typemap-vs-retval.html
 C++libraryをXS with typemap
 http://perl.g.hatena.ne.jp/bosh/20060927/p1
  
-■pod
+*pod
 perldoc perlguts
 Perl XS の API
 perldoc perlxs
@@ -24,7 +23,7 @@ XS についての概論
 perldoc perlxstut
 XSのチュートリアル
  
-■逆引き
+*逆引き
 ◎PV から文字列をとりだす
 STRLEN len;
 char *ptr;
@@ -33,19 +32,19 @@ ptr = SvPV(sv, len);
 if ( items > 2) { }
 items という変数はなぜか見える。
  
-■基本
+*基本
 • SVの種類: IV,UV,NV,PV,RVなど
  SV以外の型 - AV:配列  
 リファレンスカウント
  
-■malloc 使うな
+*malloc 使うな
 Newx(pointer, number, type);
 とかで確保して
 Safefree で開放
  
-■printf debug
+*printf debug
 PerlIO_printf(PerlIO_stderr(), "debugdebug")
 
-■see also
+*see also
 http://dann.g.hatena.ne.jp/dann/20090118/p1
 http://dann.g.hatena.ne.jp/dann/20090122/p3

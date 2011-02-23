@@ -1,11 +1,11 @@
-* 自宅サーバーの運用について
+自宅サーバーの運用について
 
-** 基本的なセットアップ
+* 基本的なセットアップ
 
 http://github.com/tokuhirom/tokuhirom-dotfiles
 にある README のとおりにセットアップすればよい。
 
-** daemontools をつかう
+* daemontools をつかう
 
 常駐させるものは daemontools でうごかしとく。
 
@@ -21,23 +21,15 @@ unco       up (pid 30310)    0days 13:05:57 47157
 wig        up (pid 6034)    48days 09:39:12 4181952
 ||<
 
-** backup policy
+* backup policy
 
-*** コードは github におく
+** コードは github におく
 
 公開できるものは github におく。
 
-*** その他、バックアップするもの
+** その他、バックアップするもの
 
 - ~/share/howm/
 - ~/share/e(ry
 - /service/
 
-** ポート番号
-
-- 10020 plackup
-- 10021 varnish
-- 10023 moxy
-- 10040 inamode13
-- 10041 newmo
-- 10042 nopaste

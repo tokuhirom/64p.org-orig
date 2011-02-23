@@ -1,4 +1,4 @@
-* munin
+munin
 
 munin はセットアップが楽だというのでためしてみる。
 
@@ -8,3 +8,5 @@ sudo aptitude install munin
 とかやるだけで、localhost のグラフをとりはじめる。
 
 /var/www/munin/ にだんだんデータがとれてくる。
+
+cloudforecast もいいのだけど、台数すくなくて、適当でよければこっちの方が楽

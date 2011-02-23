@@ -1,4 +1,8 @@
-* ncftp
-[2009-05-11 11:50]
+ncftp
 
+FTP クライアントとしてつかいやすいので、FTP つかうときにはつかってる。
+
+>||
 ncftpput -u USERNAME -p PASSWORD HOST  /path/to/remote/ upload-file
+||<
+

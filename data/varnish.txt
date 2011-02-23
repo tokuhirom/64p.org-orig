@@ -1,4 +1,4 @@
-* varnish をいれてみた
+varnish をいれてみた
 
 2009-12-26 です。varnish いれてみました。
 普通に autoconf なので、インスコはさっくり。

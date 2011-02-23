@@ -1,4 +1,4 @@
-* ホームディレクトリの設計について
+Design of Home directory
 
 はたして、どうするのがベストなのかはよくしらんけど……。
 
@@ -12,5 +12,12 @@ share/dotfiles/.emacs.d/
 howm のデータは
 share/howm/
 
-code は project/ におく。
-dev/foo/bar/
+code は dev/ におく。
+>||
+    dev/foo/
+||<
+
+この際、App::gh をつかえば以下のようにすることにより、容易にすべての github にはいっているものを clone/update することが可能
+>||
+gh all tokuhirom --into ~/dev/
+||<

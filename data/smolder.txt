@@ -1,4 +1,4 @@
-* smolder
+smolder
 
 smolder は Continuous Testing 用のサーバーです。
 
@@ -7,7 +7,7 @@ smolder は Continuous Testing 用のサーバーです。
 以下のようにして、セットアップ。
 >||
 sudo aptitude install libgd2-xpm-dev
-cpan Smolder
+cpanm Smolder
 sudo useradd smolder -d /var/lib/smolder/ -s /bin/false
 sudo mkdir /var/lib/smolder/
 sudo chown -R smolder:smolder /var/lib/smolder
@@ -31,3 +31,6 @@ exec setuidgid smolder \
     /usr/local/app/perl/bin/smolder -h 127.0.0.1 -p 10030
     --log_file=/var/log/smolder/smolder.log
 ||<
+
+Plack でうごかすには以下のようにするとよい。
+http://d.hatena.ne.jp/tokuhirom/20100111/1263224765

@@ -1,6 +1,6 @@
-* emacs
+emacs
 
-** 設定方法
+* 設定方法
 
 - .emacs はたんなるローダとする
 - .emacs.d/elisp/ に elisp をおく
@@ -10,13 +10,13 @@
 see also
 http://lagendra.s.kanazawa-u.ac.jp/ogurisu/manuals/linux/debian-tips.2004.html#dot.emacs
 
-** 文字コード
+* 文字コード
 
 日本語関係の設定を最後にすることが重要。m17n まわりの設定をしくるとひどい目にあう。
 
 C-x RET f で文字コードを指定して保存できる。
 
-*** 現在の設定をみる
+** 現在の設定をみる
 
 >||
 `C-h C <RET>'
@@ -24,47 +24,47 @@ C-x RET f で文字コードを指定して保存できる。
 ||<
 なお、C-h は M-x help のこと。
 
-** ユーティリティー
+* ユーティリティー
 
-*** iswitchb
+** iswitchb
 incremental switch buffer
 
-*** anything.el
+** anything.el
 
 わかった。これは便利だわ。find-file とか switch-buffer とかをまとめて検索できる。
 開いてるファイルも開いてないファイルも同時に検索できるっていうのがいい。
 
-*** yasnippet.el
+** yasnippet.el
 
 最近はやりの snippet 入力くん。
 
-** window分割系
+* window分割系
 
-*** windows.el
+** windows.el
 
 保存できる
 
-*** elscreen.el
+** elscreen.el
 
 保存できない。elscreen-tab 使うといいとよくググった結果のページに書いてあるが、
 もはや最新版にはとりこまれている。
 
-** 履歴系
+* 履歴系
 
-*** minibuf-isearch
+** minibuf-isearch
 
 id:knagano 作。minibuffer を後方検索できるようになる。具体的にいうと、
 C-x C-f(find-file) の操作履歴とかをたぐれるっていうこと。これに session.el をく
 みあわせると最強になる。
 
-*** session.el
+** session.el
 
 C-x C-f の履歴とかを保存してくれるスクリプト。minibuf-isearch とくみあわせると最
 強になる。
 
-** 情報整理系
+* 情報整理系
 
-*** changelog memo
+** changelog memo
 
 昔つかってた。1ファイルになんでもかいちゃう。
 
@@ -79,14 +79,14 @@ C-x C-f の履歴とかを保存してくれるスクリプト。minibuf-isearch
 
 な感じ。日記を書くには大袈裟で、情報を整理するにはやりづらい。
 
-*** planner.el
+** planner.el
 
 つかったことないけど、フランクリンプランナーっぽい感じになるらしい。日本だとあん
 まり人気なさそう。
 
 とにかく複雑なんだとさ。南無。
 
-*** org-mode
+** org-mode
 
 このファイルをかいているモード。outline-mode をベースにしている。TODO の管理とか
 なんとか、いろいろできまくる。all in one な環境っぽい。
@@ -107,13 +107,13 @@ org-mode解説: http://hpcgi1.nifty.com/spen/index.cgi?OrgMode
 showall にすると、開いたときに全部展開した状態になる。content にすると、目次を全
 部表示する感じになる。
 
-**** org-mode + GTD
+*** org-mode + GTD
 
 http://hpcgi1.nifty.com/spen/?OrgMode%2FOrgForGTD#i0
 
 に解説がモリモリのってる。けど、まあやる気はないw
 
-*** howm
+** howm
 
 hitori otegaru wiki modoki.
 
@@ -125,19 +125,19 @@ http://howm.sourceforge.jp/README-j.html
 
 とにかく C-c , , できれば OK。設定はそこからみれる。
 
-*** emacs-wiki
+** emacs-wiki
 
 wiki っぽいのを実現してる。最近つかってない。
 
-*** hogememo.el
+** hogememo.el
 
 hogememo.el をベースに、俺専用日記モードをつくっている途中。すでに原型をとどめな
 い感じになりつつある。1年1ファイルで十分かな、という気がしている。1日1ファイルだ
 と油断してるとどんどんバッファふえるしw
 
-** ネットワーク系
+* ネットワーク系
 
-*** navi2ch
+** navi2ch
 
 A でブックマークに追加
 
@@ -147,15 +147,15 @@ http://navi2ch.sourceforge.net/doc/navi2ch_4.html#SEC37
 bookmark つかいにくくね?というか、これなんの意味があるんだろう。使うメリットがな
 さすぎる。巡回用にはいまいちだ。
 
-**** bookmark の自動巡回
+*** bookmark の自動巡回
 bookmark は無名の一個つくっとけば十分。ここにはいってから ma mi で全部巡回してく
 れる。
 
-**** カキコ
+*** カキコ
 
 w でかきこみモード。C-c C-c で送信。
 
-** インストール
+* インストール
 
 >||
 (install-elisp "http://www.emacswiki.org/emacs/download/anything.el")

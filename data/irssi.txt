@@ -1,9 +1,12 @@
-* irssi
+irssi
 
-** つかってる拡張
+最近そもそも irssi つかってない@20110224
+
+* つかってる拡張
 - awl(下画面のやつ)
 - hilight2im(im.kayac.com のやつ)
-** 拡張のやり方
+
+* 拡張のやり方
 
 http://juerd.nl/site.plp/irssiscripttut
 

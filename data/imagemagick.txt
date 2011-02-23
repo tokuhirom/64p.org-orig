@@ -1,7 +1,9 @@
-* imagemagick
-[2009-07-14 12:55]
+imagemagick
 
-convert コマンドのつかいかたいつもわすれるよ
+convert コマンドのつかいかたいつもわすれるのでメモ。でもこれおもいだす暇あったら Imager つかったほうがはやかったりするのであまり意味ない。
 
-縦反転
+* 縦反転
+>||
 convert -flip foo.png bar.png
+||<
+

@@ -1,8 +1,8 @@
-* shipwright
+shipwright
 
-shipwright の使い方メモ。CPAN モジュールをモリモリインスコするる。
+shipwright の使い方メモ。repository の中に CPAN モジュールをモリモリインスコする。おもしろいけど、RT みたいなパッケージソフトの開発だからこそ、なのかなあとおもう。
 
-** initialize
+* initialize
 
 >||
 cpan Shipwright
@@ -10,17 +10,17 @@ shipwright create -r git:file:///tmp/sw.git
 export SHIPWRIGHT_REPOSITORY="git:file:///tmp/sw.git"
 ||<
  
-**install item
+*install item
 >||
 shipwright import cpan:CGI::Simple
 ||<
  
-**output
+*output
 >||
 shipwright build --install-base=outputdir
 ||<
 
-** ツリー構造
+* ツリー構造
 >||
 .
 |-- __default_builder_options

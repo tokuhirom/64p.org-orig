@@ -1,25 +1,26 @@
-* windows debug
+windows debug
 
-** LeakDiag
+* LeakDiag
 メモリリークの検出
 
-** Debugging Tools for windows
+* Debugging Tools for windows
 デバッガ関連ツールのつめあわせ by microsoft。
 
-** UMDH
+* UMDH
 LeakDiag のサブセット
 
-** Application Verifier
+* Application Verifier
 プロセスを監視して基本的なプログラミングミスを発見する
 
-** Process Exploroer
+* Process Exploroer
 タスクマネージャの強力なやつ。Process Monitor という類似品もあり。
 
-** windows driver build
+* windows driver build
 ビルド環境
 
-** wireshark
+* wireshark
 プロトコルアナライザ
 
-** DebugDiag
+* DebugDiag
 メモリリークの検出、クラッシュデータの収集、拡張オブジェクトモデル
+

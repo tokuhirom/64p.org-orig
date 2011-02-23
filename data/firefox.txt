@@ -1,52 +1,27 @@
-* firefox のこと
+firefox
 
-** つかってるもの
+* つかってるもの
 
-*** addons
+** addons
 
 - adblock plus
-- firebugf
-- google gears(ほとんどつかってないけど)
+- firebug
 - web developer
 - refcontrol(for tumblr)
- greasemonkey(for autopagerize)
-- treestyle tab
-- vimp
+- greasemonkey
+- autopagerize
 - download statusbar
-- noscript
 - live http headers
-- secure login(password filling をキーボードで一発でできる)
-- scrapbook
--- オフラインでの作業時に資料確認するために
 
-*** greasemonkey
+** greasemonkey
 
 - autopagerize
 - ldr incr/decr
 -- http://d.hatena.ne.jp/kusigahama/20071107
 
-*** vimp
+* tips
 
-- _libly.js
-- direct_hb.js(direct_bookmark の livedoor clip がうまくうごかなかったので B! に移行した)
-- feedSomeKeys_2.js(gmail とか ldr とかよう)
-- feeder.js(ldr 講読用)
-- multi_requester.js(alc みるのにつかってる)
-
-*** つかってたけどつかわなくなったもの
-- evernote(evernote さいきんつかってないから)
-- read it later(keyboard で操作できなかったから)
-
-** tips
-
-*** web developer のツールバーをトグルする
-
->||
-:js webdeveloper_toggleToolbar()
-||<
-on vimp.
-
-*** X11 で C-h をヒストリーじゃなくす
+** X11 で C-h をヒストリーじゃなくす
 
 vimp で↓する。xmodmap などでがんばっても無駄。
 :map <C-h> <BackSpace>
