@@ -275,38 +275,57 @@ body {
   margin-left: 2%;
   margin-right: 2%;
   max-width: 960px;
-  margin: auto;
-  background-color: #ffffef; }
+  margin: 0 auto;
+  background-color: white; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #cc0000; }
+  a:hover {
+    color: #cc0000;
+    text-decoration: underline; }
 
-header a {
-  font-size: 140%;
-  color: #788888; }
-  header a:hover {
-    color: #cccccc; }
-header .subtitle {
-  font-size: small;
-  text-align: right;
-  color: #cccccc; }
-
-#logo {
-  font-size: 2em; }
+header {
+  margin-bottom: 0.8em;
+  zoom: 1;
+  position: relative; }
+  header:before, header:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020"; }
+  header:after {
+    clear: both; }
+  header a {
+    font-size: 140%;
+    color: #788888; }
+    header a:hover {
+      color: #cccccc; }
+  header .logo {
+    font-size: 2em;
+    float: left; }
+  header .subtitle {
+    font-size: small;
+    text-align: right;
+    color: #cccccc;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
 
 body > nav {
-  background-color: #eeeede;
-  padding: 8px; }
+  background-color: #eeeece;
+  font-size: 120%;
+  padding: 8px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px; }
   body > nav ul {
     list-style: none;
     margin: 0; }
     body > nav ul li {
       padding: 4px;
       display: inline; }
-      body > nav ul li a {
-        text-decoration: none; }
-        body > nav ul li a:hover {
-          text-decoration: underline; }
       body > nav ul li .active {
         text-decoration: underline;
         font-weight: bold; }
@@ -314,13 +333,22 @@ body > nav {
 .content {
   margin-top: 10px;
   margin-left: 10px; }
-  .content li {
-    margin-top: 5px;
-    margin-bottom: 2px;
+  .content ul.sites li {
+    margin-bottom: 2em;
     list-style: none; }
-    .content li a {
-      text-decoration: none;
-      font-size: 140%; }
+    .content ul.sites li a {
+      display: table; }
+      .content ul.sites li a img {
+        display: table-cell; }
+      .content ul.sites li a .info {
+        padding-left: 10px;
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%; }
+        .content ul.sites li a .info .title {
+          font-size: 140%; }
+        .content ul.sites li a .info .description {
+          font-size: 80%; }
   .content section .entry-body {
     margin-left: 10px; }
 

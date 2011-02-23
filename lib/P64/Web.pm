@@ -22,6 +22,7 @@ sub dispatch {
 
 # setup view class
 use Tiffany::Text::Xslate;
+use Digest::MD5 ();
 {
     my $view_conf = __PACKAGE__->config->{'Text::Xslate'} || die "missing configuration for Text::Xslate";
     unless (exists $view_conf->{path}) {
@@ -34,6 +35,7 @@ use Tiffany::Text::Xslate;
             c => sub { Amon2->context() },
             uri_with => sub { Amon2->context()->req->uri_with(@_) },
             uri_for  => sub { Amon2->context()->uri_for(@_) },
+            screen_shot => sub { '/static/img/screen_shot/' . Digest::MD5::md5_hex(@_) . '-clipped.png' },
         },
         %$view_conf
     });

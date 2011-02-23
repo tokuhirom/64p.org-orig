@@ -11,16 +11,14 @@
 </head>
 <body>
     <header>
-        <div id="logo">
-            <a href="[% uri_for('/') %]">64p.org</a>
-            <div class="subtitle">shut the fuck up and do something</div>
-        </div>
+        <div class="logo"><a href="[% uri_for('/') %]">64p.org</a></div>
+        <div class="subtitle">shut the fuck up and do something</div>
     </header>
     <nav>
         <ul>
             <li><a href="/"[% IF c().req.path_info=='/' %]class="active"[% END %]>Home</a></li>
-            <li><a href="/memo/" [% IF c().req.path_info.match('^/memo/') %]class="active"[% END %]>memo</a></li>
-            <li><a href="/about" [% IF c().req.path_info=='/about' %]class="active"[% END %]>about me</a></li>
+            <li><a href="/memo/" [% IF c().req.path_info.match('^/memo/') %]class="active"[% END %]>Memo</a></li>
+            <li><a href="/about" [% IF c().req.path_info=='/about' %]class="active"[% END %]>About me</a></li>
         </ul>
     </nav>
     <div class="content">
