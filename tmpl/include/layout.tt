@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>[% title || '64p.org' %]</title>
+    <meta http-equiv="Content-Style-Type" content="text/css" />  
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />  
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"]]>
+    <meta name="format-detection" content="telephone=no" />
+    <link href="[% uri_for('/static/css/main.css') %]" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="[% uri_for('/') %]">64p.org</a>
+            <div class="subtitle">shut the fuck up and do something</div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/"[% IF c().req.path_info=='/' %]class="active"[% END %]>Home</a></li>
+            <li><a href="/memo/" [% IF c().req.path_info=='/memo/' %]class="active"[% END %]>memo</a></li>
+            <li><a href="/about" [% IF c().req.path_info=='/about' %]class="active"[% END %]>about me</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        [% content %]
+    </div>
+    <footer>
+        <p>Copyright (c) 2009-2011 64p.org. All rights reserved.</p>
+        <p>Powered by <a href="http://amon.64p.org/">Amon2</a></p>
+    </footer>
+
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-59935-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+</html>

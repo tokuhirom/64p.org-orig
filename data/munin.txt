@@ -1,0 +1,10 @@
+* munin
+
+munin はセットアップが楽だというのでためしてみる。
+
+>||
+sudo aptitude install munin
+||<
+とかやるだけで、localhost のグラフをとりはじめる。
+
+/var/www/munin/ にだんだんデータがとれてくる。

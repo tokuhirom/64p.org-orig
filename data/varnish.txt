@@ -1,0 +1,24 @@
+* varnish をいれてみた
+
+2009-12-26 です。varnish いれてみました。
+普通に autoconf なので、インスコはさっくり。
+
+あとは daemontools で、適当にたちあげるだけ。設定は vcl っていう外部 DSL だが、そ
+んなにむずかしくない。元々はいってる default.vcl っていうファイルを参考に変更する
+だけ。daemontools の設定は以下のようなかんじ。-F でフォアグラウンドモードで走るの
+で、それだけわすれないように。
+
+>||
+#!/bin/sh
+
+echo 2>&1
+
+# -F means Foreground
+# -n means working directory
+exec setuidgid varnish \
+    /usr/local/app/varnish/sbin/varnishd -a 127.0.0.1:10021 -n /var/lib/varnish/ -F -f /path/to/my.vcl
+||<
+
+varnish のキャッシュを purge するには、HTTP の PURGE method でリクエストおくるか、
+コマンドでけすか、の二択。コマンドでけす方法なら正規表現がつかえる。HTTP method
+だとだめ。

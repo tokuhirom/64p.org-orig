@@ -1,0 +1,16 @@
+* ホームディレクトリの設計について
+
+はたして、どうするのがベストなのかはよくしらんけど……。
+
+データ的なのは share/ というルール、かな?
+
+dotfiles は share/dotfiles から soft symbolic link はる
+share/dotfiles/
+share/dotfiles/.emacs
+share/dotfiles/.emacs.d/
+
+howm のデータは
+share/howm/
+
+code は project/ におく。
+dev/foo/bar/

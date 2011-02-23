@@ -1,0 +1,48 @@
+* ふとおもったことのメモ。
+
+ここにかいたことはわりとすぐ消す。かもしれない。
+
+URI::Fetch はキャッシュをよしなにしてくれるあたりがいいということで一時期人気が
+あったのだが、結局インターフェイスとかが微妙につかいにくかったりするので、
+LWP::UserAgent::WithCache つかった方が楽な気がする。sekimura++
+
+Plagger の設定をがんばってかくのは、エンドユーザーとしてつかうならいいのだが、い
+ろいろハックしながらつかおうとおもうと、モジュールくみあわせて自前でかいた方が楽
+な気がする。
+
+↓こんなんなってたよ。
+>||
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       GLOB(0x10082de30)
+#       GLOB(0x10082dec0)
+#       GLOB(0x100f410c8)
+#       GLOB(0x100f41128)
+#       GLOB(0x100f79358)
+#       GLOB(0x100f79400)
+#       GLOB(0x100f7a248)
+||<
+
+ブログの構成ちとかえた。inotify2 でファイル更新を検知して、静的 blosxom っぽく全
+部再生成かけてたのだが、管理がめんどくさくなってきたので、ワーカープロセスでは
+inotify で検知してから記法のパースまでしかやらないことにした。データをとったら
+DB につっこんどいて、レンダリングは plackup でやる。waf はもちろん Amon で。Amon
+楽すぎるわ。。で、データはページキャッシュする。
+
+で、パフォーマンスだが、Amolog で varnish のページを表示させたときのをはかる。
+有線 LAN の中にある macbook からはかる。
+static contents として配信してると
+Requests per second:    1960.34 [#/sec] (mean)
+ぐらいでる。まあこんなもんか。で、plackup に直接リクエストかけると
+Requests per second:    99.02 [#/sec] (mean)
+といったところ、まあ動的アプリケーションとしてはそこそこ速い。
+nginx とおして plackup にいった場合。
+Requests per second:    96.81 [#/sec] (mean)
+若干劣化してるけど、誤差の範囲か。
+varnish とおして plackup にいった場合。
+Requests per second:    1782.52 [#/sec] (mean)
+まあ速いわなあ。うむ。
+
+しかし varnish にキャッシュさすと、expire しなくちゃいけないわけで。めんどくさい
+な。

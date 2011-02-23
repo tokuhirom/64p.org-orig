@@ -1,0 +1,25 @@
+* Django
+
+Django は python のウェブアプリケーションフレームワーク。
+
+- フルスタック
+- 継承ベースフレームワーク
+- admin ページの自動生成
+- キャッシュの重視
+とかが特徴か。
+
+テンプレートの読み込みはこんなかんじ。結構めんどくさい。
+>||
+from django.template import Context, loader
+from mysite.polls.models import Poll
+from django.http import HttpResponse
+
+def index(request):
+    latest_poll_list = Poll.objects.all().order_by('-pub_date')[:5]
+    t = loader.get_template('polls/index.html')
+    c = Context({
+        'latest_poll_list': latest_poll_list,
+    })
+    return HttpResponse(t.render(c))
+||<
+

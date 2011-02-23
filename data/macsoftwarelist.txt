@@ -1,0 +1,70 @@
+* mac software list
+
+** いつもつかうの
+
+witch(alt+tab)
+
+*** 基本のもの
+
+cooviewer
+keyremap4macbook(これないと生きていけない)
+gyazo
+iTunes(伊集院 podcast 聞くとき用)
+Preview(まあ……)
+appfresh(アプリケーション一覧つくる人)
+macrpots
+adium
+growl
+
+*** 動画関連
+perian(動画codecs)
+flip4mac(wmv coded)
+perian(動画codec)
+WMV Player
+
+*** simbl(拡張いろいろ)
+- InputSwitcher
+
+*** will be remove?
+spaces(builtin)
+The UnArchiver
+
+** 使ってないけど要チェックなの
+
+*** Mojo
+
+iTunes のライブラリをインターネット越しに共有できるソフトウェアです。Windows だけ
+でなく、Mac 用もあります。自宅のライブラリを会社の PC や外出先からモバイル PC で
+共有したりといった使い方がとっても便利なソフトです。
+
+*** ourTunes
+
+iTunes のライブラリをインターネット越しに共有できるソフトウェアです。Windows だけ
+でなく、Mac 用もあります。自宅のライブラリを会社の PC や外出先からモバイル PC で
+共有したりといった使い方がとっても便利なソフトです。
+
+*** alarm clock 2
+
+*** be born tired
+- マウスカーソルをキーボードでうごかすやつ
+
+*** presentyourapps
+
+特定アプリケーションをメニューバー非表示にする。 X11 で生きれば必要がない。
+
+*** niceplayer
+かるい動画プレイヤー。
+
+*** isquint
+動画変換
+
+*** audacity
+音声編集
+
+*** seashore
+
+cocoa 版の gimp。
+
+*** mac の起動音をけす
+
+http://www5e.biglobe.ne.jp/~arcana/StartupSound/BETA/

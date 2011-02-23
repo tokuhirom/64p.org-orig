@@ -1,0 +1,3 @@
+* daemontools
+
+svc

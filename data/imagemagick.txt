@@ -1,0 +1,7 @@
+* imagemagick
+[2009-07-14 12:55]
+
+convert コマンドのつかいかたいつもわすれるよ
+
+縦反転
+convert -flip foo.png bar.png

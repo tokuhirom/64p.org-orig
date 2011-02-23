@@ -1,0 +1,8 @@
+* Web Application Framework におけるトレードオフについてのもろもろ
+
+** Dispatcher をどの方式にするか
+中央で管理するか、Attribute 等で分散させるか。
+
+** Container クラスをどうおくか
+
+** プラグインをどうおくか

@@ -1,0 +1,94 @@
+@import "meyer-reset";
+@import "typography";
+@import "css3";
+
+body {
+    margin-left:  2%;
+    margin-right: 2%;
+    max-width: 960px;
+    margin: auto;
+    background-color: #ffffef;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    a {
+        font-size: 140%;
+        color: black;
+        &:hover {
+            color: #cccccc;
+        }
+    }
+    
+    .subtitle {
+        font-size: small;
+        text-align: right;
+        color: #cccccc;
+    }
+}
+
+
+#logo {
+    font-size: 2em;
+}
+
+body > nav {
+    ul {
+        list-style: none;
+        li {
+            padding: 4px;
+            display: inline;
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .active {
+                text-decoration: underline;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.content {
+    li {
+        margin-top: 5px;
+        margin-bottom: 2px;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            font-size: 140%;
+        }
+    }
+}
+
+body > footer {
+    font-size: small;
+    text-align: right;
+    color: #cccccc;
+
+    a {
+        color: #cccccc;
+        font-weight: bold;
+        &:hover {
+            color: #999999;
+        }
+    }
+
+    p {
+        margin-bottom: 2px;
+    }
+}
+
+@media screen and (max-device-width: 480px) {
+    body {
+        width: 96%;
+    }
+}
+

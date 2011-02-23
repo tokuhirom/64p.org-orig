@@ -1,0 +1,33 @@
+* smolder
+
+smolder は Continuous Testing 用のサーバーです。
+
+例によって、daemontools + ubuntu な環境前提ですが。
+
+以下のようにして、セットアップ。
+>||
+sudo aptitude install libgd2-xpm-dev
+cpan Smolder
+sudo useradd smolder -d /var/lib/smolder/ -s /bin/false
+sudo mkdir /var/lib/smolder/
+sudo chown -R smolder:smolder /var/lib/smolder
+sudo mkdir /var/log/smolder/
+sudo chown smolder:smolder /var/log/smolder/
+||<
+
+daemontools の設定的にはこんなかんじ。$TMPDIR のあたりは、なんかくさってる気がしてならない。
+>||
+#!/bin/sh
+
+TMPDIR=/tmp/smolder
+if [ ! -d "$TMPDIR" ]; then
+    install -o smolder -g smolder -m 2755 -d $TMPDIR
+fi
+echo $TMPDIR > env/TMPDIR
+
+exec 2>&1
+exec setuidgid smolder \
+    envdir ./env \
+    /usr/local/app/perl/bin/smolder -h 127.0.0.1 -p 10030
+    --log_file=/var/log/smolder/smolder.log
+||<

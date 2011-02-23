@@ -1,0 +1,34 @@
+* TokyoTyrant のセットアップ
+[2009-12-11 13:38]
+>||
+sudo aptitude install libbz2-dev
+wget http://1978th.net/tokyocabinet/tokyocabinet-1.4.41.tar.gz
+tar xzvf tokyocabinet-1.4.41.tar.gz
+./configure
+make
+sudo make install
+
+wget http://1978th.net/tokyotyrant/tokyotyrant-1.1.39.tar.gz
+tar xvzf tokyotyrant-1.1.39.tar.gz
+cd tokyotyrant-1.1.39/
+./configure
+make
+sudo make install
+
+sudo /sbin/ldconfig
+
+sudo useradd tt
+sudo mkdir /var/lib/tt/
+sudo chown tt:tt /var/lib/tt/
+sudo -u tt /usr/local/bin/ttserver -host 127.0.0.1 -port 1978
+/var/lib/tt/casket.tch
+
+# testing
+tcrtest read 127.0.0.1
+||<
+
+で、あとは daemontools で、こんなかんじで起動すればおk
+>||
+exec /command/setuidgid tt \
+    /usr/local/bin/ttserver -host 127.0.0.1 -port 1978 /var/lib/tt/casket.tch
+||<

@@ -1,0 +1,9 @@
+[% WRAPPER 'include/layout.tt' %]
+
+<ul>
+[% FOR memo IN files %]
+    <li><a href="/memo/[% memo.file %]">[% memo.title %]</a></li>
+[% END %]
+</ul>
+
+[% END %]

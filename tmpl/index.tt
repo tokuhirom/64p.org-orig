@@ -1,0 +1,22 @@
+[% WRAPPER 'include/layout.tt' %]
+
+<h3>products</h3>
+<ul>
+    <li><a href="/memo/">my memo</a></li>
+    <li><a href="/menta/">MENTA, yet another web application framework for limited environements like CGI</a></li>
+    <li><a href="http://amon.64p.org/">Amon - brandnew framework for the web development</a></li>
+    <li><a href="http://newmo.64p.org/">Newmo - News aggregater for mobile phone</a></li>
+    <li><a href="http://frepan.64p.org/">frepan - yet another CPAN search engine</a></li>
+    <li><a href="http://cf.64p.org/">stats of this site</a></li>
+    <li><a href="http://perldoc.jp/">perldoc.jp</a></li>
+</ul>
+
+<h3>tiny::utilities</h3>
+<ul>
+    <li><a href="http://nopaste.64p.org/">nopaste</a></li>
+    <li><a href="http://corelist.64p.org/">corelist - module::corelist web ui</a></li>
+    <li><a href="http://qrcode.64p.org/">qrcode generator</a></li>
+    <li><a href="http://gyazo.64p.org/">gyazo on 64p.org</a></li>
+</ul>
+
+[% END %]

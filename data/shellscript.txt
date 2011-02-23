@@ -1,0 +1,22 @@
+* shell script
+
+シェルスクリプトの使い方がおぼえられません。
+
+** 基礎文法
+
+*** if
+
+>||
+if [ -e "/tmp/foo" ]
+then
+  ...
+fi
+||<
+
+** 拡張子一括変換
+
+>||
+for name in *.htm ; do
+  mv ${name%.htm}.html;
+done
+||<

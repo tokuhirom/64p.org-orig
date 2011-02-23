@@ -1,0 +1,77 @@
+* qpsmtpd
+
+qpsmtpd は mod_perl for smtp だそうで。メールの受けとりから動的にアプリケーショ
+ンコードを実行するとかそういうのに便利。メアドに写真をアップするとか、そういうの
+につかえる。
+
+「aptitude install qpsmtpd」 は、なんか案の定たちあがらなかったりするので、svn から落とした方がよい。
+
+>||
+mv config.sample/ config/
+||<
+してから、
+>||
+./qpsmtpd-forkserver -u $USER
+||<
+すると起動。
+>||
+telnet localhost 2525
+||<
+とかして、話しかけてみたりできる。
+
+>||
+vi config/plugins
+||<
+して、使うプラグインの名前を書く。
+
+plugin の中身は割りとシンプル。plugin/wassr-upload とか、そういう感じのファイル名で保存するのがよい。
+実際のロジック自体は、別個においとくのがいいかもだけど。
+
+>||
+# ユーザー情報データベースだと思ってください
+my $users = +{
+   map { $_->{address} => $_ }
+   (
+       { user_id => 1, address =>'from@example.com' },
+   )
+};
+ 
+# フックしてるアカウント名
+my $hooked_user = 'upload';
+ 
+sub hook_queue {
+   my ($self, $transaction) = @_;
+ 
+   for my $rcpt ($transaction->recipients) {
+       # フックしてるユーザー(サーバー側のアカウント名)かどうかチェックする
+       unless ($rcpt->user eq $hooked_user) {
+           next;
+       }
+ 
+       my $sender = $transaction->sender;
+       if (my $user = $users->{$sender->address}) {
+           # user found
+           $self->reply_ok($transaction);
+           return OK;
+       } else {
+           # user not found error
+           $self->reply_error($transaction);
+           return OK;
+       }
+   }
+   return DECLINED;
+}
+ 
+sub reply_ok {
+   my ($self, $transaction) = @_;
+   my $body = $transaction->body_as_string;
+}
+ 
+sub reply_error {
+   my ($self, $transaction) = @_;
+   # send error message
+}
+||<
+
+tomi-ru さんの記事がすごい参考になる。
+http://e8y.net/blog/2007/07/07/p186.html

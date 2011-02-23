@@ -1,0 +1,12 @@
+* curl
+[2009-12-10 17:20]
+
+** stdout にだす
+>||
+curl http://google.co.jp/
+||<
+
+** PUT でファイルおくる
+>||
+$ curl -O -T FILENAME URL
+||<

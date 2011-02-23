@@ -1,0 +1,4 @@
+* ncftp
+[2009-05-11 11:50]
+
+ncftpput -u USERNAME -p PASSWORD HOST  /path/to/remote/ upload-file

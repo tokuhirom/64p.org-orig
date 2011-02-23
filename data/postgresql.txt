@@ -1,0 +1,4 @@
+* postgresql
+[2009-09-11 08:09]
+
+sudo -u postgres createdb foo
