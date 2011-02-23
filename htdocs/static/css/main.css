@@ -283,7 +283,7 @@ a {
 
 header a {
   font-size: 140%;
-  color: black; }
+  color: #788888; }
   header a:hover {
     color: #cccccc; }
 header .subtitle {
@@ -294,26 +294,35 @@ header .subtitle {
 #logo {
   font-size: 2em; }
 
-body > nav ul {
-  list-style: none; }
-  body > nav ul li {
-    padding: 4px;
-    display: inline; }
-    body > nav ul li a {
-      text-decoration: none; }
-      body > nav ul li a:hover {
-        text-decoration: underline; }
-    body > nav ul li .active {
-      text-decoration: underline;
-      font-weight: bold; }
+body > nav {
+  background-color: #eeeede;
+  padding: 8px; }
+  body > nav ul {
+    list-style: none;
+    margin: 0; }
+    body > nav ul li {
+      padding: 4px;
+      display: inline; }
+      body > nav ul li a {
+        text-decoration: none; }
+        body > nav ul li a:hover {
+          text-decoration: underline; }
+      body > nav ul li .active {
+        text-decoration: underline;
+        font-weight: bold; }
 
-.content li {
-  margin-top: 5px;
-  margin-bottom: 2px;
-  list-style: none; }
-  .content li a {
-    text-decoration: none;
-    font-size: 140%; }
+.content {
+  margin-top: 10px;
+  margin-left: 10px; }
+  .content li {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    list-style: none; }
+    .content li a {
+      text-decoration: none;
+      font-size: 140%; }
+  .content section .entry-body {
+    margin-left: 10px; }
 
 body > footer {
   font-size: small;

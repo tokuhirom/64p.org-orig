@@ -19,7 +19,7 @@
     <nav>
         <ul>
             <li><a href="/"[% IF c().req.path_info=='/' %]class="active"[% END %]>Home</a></li>
-            <li><a href="/memo/" [% IF c().req.path_info=='/memo/' %]class="active"[% END %]>memo</a></li>
+            <li><a href="/memo/" [% IF c().req.path_info.match('^/memo/') %]class="active"[% END %]>memo</a></li>
             <li><a href="/about" [% IF c().req.path_info=='/about' %]class="active"[% END %]>about me</a></li>
         </ul>
     </nav>

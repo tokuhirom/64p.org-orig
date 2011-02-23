@@ -40,7 +40,7 @@ any '/memo/{name:[a-z0-9_-]+}.html' => sub {
     my $body = do { local $/; <$fh> };
     my $xatena = Text::Xatena->new();
     $c->render( 'memo.tt',
-        { title => $title, body => mark_raw( $xatena->format($body) ) } );
+        { entry_title => $title, body => mark_raw( $xatena->format($body) ) } );
 };
 
 1;

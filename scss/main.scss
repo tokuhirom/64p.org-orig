@@ -17,7 +17,7 @@ a {
 header {
     a {
         font-size: 140%;
-        color: black;
+        color: #788888;
         &:hover {
             color: #cccccc;
         }
@@ -36,8 +36,13 @@ header {
 }
 
 body > nav {
+    background-color: #eeeede;
+    padding: 8px;
+
     ul {
         list-style: none;
+        margin: 0;
+
         li {
             padding: 4px;
             display: inline;
@@ -56,6 +61,9 @@ body > nav {
 }
 
 .content {
+    margin-top: 10px;
+    margin-left: 10px;
+
     li {
         margin-top: 5px;
         margin-bottom: 2px;
@@ -64,6 +72,12 @@ body > nav {
         a {
             text-decoration: none;
             font-size: 140%;
+        }
+    }
+
+    section {
+        .entry-body {
+            margin-left: 10px;
         }
     }
 }
