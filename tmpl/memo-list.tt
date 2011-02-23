@@ -1,8 +1,8 @@
 [% WRAPPER 'include/layout.tt' %]
 
-<ul>
+<ul class="memo-list">
 [% FOR memo IN files %]
-    <li><a href="/memo/[% memo.file %]">[% memo.title %]</a></li>
+    <li><a href="/memo/[% memo.file %]">[% memo.title || '<B>error</B>' %]</a></li>
 [% END %]
 </ul>
 

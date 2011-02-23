@@ -2,36 +2,76 @@
 
 [% data = [
     {
-        url => 'http://64p.org/menta/',
-        title => 'MENTA',
-        description => 'Web application framework for CGI',
+        category => 'Web Application Frameworks',
+        sites => [
+            {
+                url => 'http://64p.org/menta/',
+                title => 'MENTA',
+                description => 'Web application framework for CGI',
+            },
+            {
+                url => 'http://amon.64p.org/',
+                title => 'Amon',
+                description => 'Web application framework for fast development',
+            },
+        ]
     },
     {
-        url => 'http://amon.64p.org/',
-        title => 'Amon',
-        description => 'Web application framework for fast development',
+        category => 'Entertainment',
+        sites => [
+            {
+                url => 'http://newmo.64p.org/',
+                title => 'Newmo',
+                description => 'news aggregator for mobile phones',
+            },
+        ]
     },
     {
-        url => 'http://newmo.64p.org/',
-        title => 'Newmo',
-        description => 'news aggregator for mobile phones',
+        category => 'Sites for Perl5 developers',
+        sites => [
+            {
+                url => 'http://frepan.64p.org/',
+                title => 'FrePAN',
+                description => 'yet another CPAN mirror site',
+            },
+            {
+                url => 'http://perldoc.jp/',
+                title => 'perldoc.jp',
+                description => 'Japanese translated version of Perl documents',
+            },
+            {
+                url => 'http://corelist.64p.org/',
+                title => 'corelist',
+                description => 'Display Perl5 core module informations',
+            },
+        ],
     },
     {
-        url => 'http://frepan.64p.org/',
-        title => 'FrePAN',
-        description => 'yet another CPAN mirror site',
-    },
-    {
-        url => 'http://perldoc.jp/',
-        title => 'perldoc.jp',
-        description => 'Japanese translated version of Perl documents',
-    },
-    ]
-%]
+        category => 'Productivity',
+        sites => [
+            {
+                url => 'http://nopaste.64p.org/',
+                title => 'No Paste',
+                description => 'Yet another no paste site',
+            },
+            {
+                url => 'http://qrcode.64p.org/',
+                title => 'qrcode',
+                description => 'QRCode generator',
+            },
+            {
+                url => 'http://gyazo.64p.org/',
+                title => 'gyazo',
+                description => 'gyazo clone',
+            },
+        ]
+    }
+] %]
 
-<h3>Products</h3>
+[% FOR sites IN data %]
+<h3>[% sites.category %]</h3>
 <ul class="sites">
-    [% FOR v IN data %]
+    [% FOR v IN sites.sites %]
     <li>
         [% v.dump %]
         <a href="[% v.url %]">
@@ -44,45 +84,6 @@
     </li>
     [% END %]
 </ul>
-
-[% data = [
-    {
-        url => 'http://nopaste.64p.org/',
-        title => 'No Paste',
-        description => 'Yet another no paste site',
-    },
-    {
-        url => 'http://corelist.64p.org/',
-        title => 'corelist',
-        description => 'Display Perl5 core module informations',
-    },
-    {
-        url => 'http://qrcode.64p.org/',
-        title => 'qrcode',
-        description => 'QRCode generator',
-    },
-    {
-        url => 'http://gyazo.64p.org/',
-        title => 'gyazo',
-        description => 'gyazo clone',
-    },
-    ]
-%]
-
-<h3>Tiny utilities</h3>
-<ul class="sites">
-    [% FOR v IN data %]
-    <li>
-        [% v.dump %]
-        <a href="[% v.url %]">
-            <img src="[% screen_shot(v.url) %]" width="200" class="thumbnail" />
-            <div class="info">
-                <div class="title">[% v.title %]</div>
-                <div class="description">[% v.description %]</div>
-            </div>
-        </a>
-    </li>
-    [% END %]
-</ul>
+[% END %]
 
 [% END %]
