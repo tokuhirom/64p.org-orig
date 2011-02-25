@@ -339,6 +339,10 @@ ul.memo-list {
 .content {
   margin-top: 10px;
   margin-left: 10px; }
+  .content ul {
+    list-style: none; }
+    .content ul li {
+      line-height: 1.5em; }
   .content ul.sites {
     zoom: 1; }
     .content ul.sites:before, .content ul.sites:after {

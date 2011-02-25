@@ -99,6 +99,13 @@ ul.memo-list {
     margin-top: 10px;
     margin-left: 10px;
 
+    ul {
+        list-style: none;
+        li {
+            line-height: 1.5em;
+        }
+    }
+
     ul.sites {
         @include clearfix;
 
