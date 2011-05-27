@@ -12,6 +12,7 @@ requires 'Plack::Middleware::ReverseProxy';
 requires 'HTML::FillInForm::Lite';
 requires 'Time::Piece';
 requires 'HTTP::Parser::XS';
+requires 'DBI';
 recursive_author_tests('xt');
 
 WriteAll;
