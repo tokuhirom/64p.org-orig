@@ -13,6 +13,7 @@ requires 'HTML::FillInForm::Lite';
 requires 'Time::Piece';
 requires 'HTTP::Parser::XS';
 requires 'DBI';
+requires 'DBIx::TransactionManager';
 recursive_author_tests('xt');
 
 WriteAll;
