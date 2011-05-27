@@ -15,8 +15,12 @@ requires 'HTTP::Parser::XS';
 requires 'DBI';
 requires 'DBIx::TransactionManager';
 requires(
-	'SQL::Interp' => 0,
-	'Carp::Clan' => 0,
+    map { $_ => 0 }
+      qw(
+      SQL::Interp
+      Carp::Clan
+      Text::Xatena
+      )
 );
 recursive_author_tests('xt');
 
