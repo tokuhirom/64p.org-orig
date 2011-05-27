@@ -14,7 +14,10 @@ requires 'Time::Piece';
 requires 'HTTP::Parser::XS';
 requires 'DBI';
 requires 'DBIx::TransactionManager';
-requires 'SQL::Interp';
+requires(
+	'SQL::Interp' => 0,
+	'Carp::Clan' => 0,
+);
 recursive_author_tests('xt');
 
 WriteAll;
