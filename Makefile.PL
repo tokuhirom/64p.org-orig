@@ -14,6 +14,7 @@ requires 'Time::Piece';
 requires 'HTTP::Parser::XS';
 requires 'DBI';
 requires 'DBIx::TransactionManager';
+requires 'SQL::INterp';
 recursive_author_tests('xt');
 
 WriteAll;
