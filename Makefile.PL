@@ -2,7 +2,7 @@ use inc::Module::Install;
 all_from "lib/P64.pm";
 
 license 'unknown';
-author  'unknown';
+author  'tokuhirom';
 
 tests 't/*.t t/*/*.t t/*/*/*.t';
 requires 'Amon2';
