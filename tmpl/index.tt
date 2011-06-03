@@ -20,7 +20,7 @@
         category => 'Entertainment',
         sites => [
             {
-                url => 'http://newmo.64p.org/',
+                url => 'http://www.newmo.dotcloud.com/',
                 title => 'Newmo',
                 description => 'news aggregator for mobile phones',
             },
