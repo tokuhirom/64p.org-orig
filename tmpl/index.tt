@@ -30,7 +30,7 @@
         category => 'Sites for Perl5 developers',
         sites => [
             {
-                url => 'http://frepan.64p.org/',
+                url => 'http://frepan.org/',
                 title => 'FrePAN',
                 description => 'yet another CPAN mirror site',
             },
