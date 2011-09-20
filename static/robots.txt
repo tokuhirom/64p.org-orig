@@ -1,0 +1,17 @@
+User-agent: Mediapartners-Google*
+Disallow:
+
+User-Agent: e-SocietyRobot
+Disallow: /
+
+User-agent: Yetibot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Spinn3r
+Disallow: /
+
+User-agent: *
+Allow: /

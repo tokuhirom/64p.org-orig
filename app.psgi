@@ -6,9 +6,12 @@ use P64::Web;
 use Plack::Builder;
 
 builder {
-    enable 'Plack::Middleware::Static',
-        path => qr{^(?:/static/|/robot\.txt$|/favicon.ico$)},
-        root => File::Spec->catdir(dirname(__FILE__), 'htdocs');
     enable 'Plack::Middleware::ReverseProxy';
-    P64::Web->to_app();
+    enable 'Plack::Middleware::Static',
+        path => qr{^(?:/robots\.txt$|/favicon.ico$|^/debian\.txt$)},
+        root => File::Spec->catdir(dirname(__FILE__), 'static');
+    mount '/static/' => Plack::App::File->new(
+        root => File::Spec->catdir(dirname(__FILE__), 'static')
+    )->to_app;
+    mount '/' => P64::Web->to_app();
 };

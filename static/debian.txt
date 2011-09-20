@@ -1,0 +1,1 @@
+All of my modules available at http://search.cpan.org/~tokuhirom/ with the statement "AUTHOR: Tokuhiro Matsuno" are, unless otherwise noted, Copyright (c) Tokuhiro Matsuno.
