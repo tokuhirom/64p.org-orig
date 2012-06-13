@@ -17,27 +17,12 @@
         ]
     },
     {
-        category => 'Entertainment',
-        sites => [
-            {
-                url => 'http://www.newmo.dotcloud.com/',
-                title => 'Newmo',
-                description => 'news aggregator for mobile phones',
-            },
-        ]
-    },
-    {
         category => 'Sites for Perl5 developers',
         sites => [
             {
                 url => 'http://frepan.org/',
                 title => 'FrePAN',
                 description => 'yet another CPAN mirror site',
-            },
-            {
-                url => 'http://perldoc.jp/',
-                title => 'perldoc.jp',
-                description => 'Japanese translated version of Perl documents',
             },
             {
                 url => 'http://corelist.64p.org/',
