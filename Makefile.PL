@@ -19,6 +19,7 @@ requires(
       SQL::Interp
       Carp::Clan
       Text::Xatena
+	  Module::Find
       )
 );
 recursive_author_tests('xt');
