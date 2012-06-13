@@ -1,0 +1,24 @@
+setup in ubuntu server
+=======================
+
+sudo aptitude install nginx daemontools daemontools-run
+/usr/local/perl/latest/bin/cpanm --installdeps -nv .
+sudo mkdir -p /usr/local/webapp/
+sudo ln -s `pwd`/etc/httpd/64p.org.conf /etc/nginx/sites-enabled/64p.org.conf
+# sudo ln -s `pwd`/etc/service/64p.org-apps/ /service/64p.org-apps
+sudo ln -s `pwd`/etc/init/64p.org.conf /etc/init/64p.org.conf
+sudo initctl reload-configuration
+sudo initctl start 64p.org
+
+logs
+====
+
+ * /var/log/upstart/64org.log
+ * /var/log/nginx/64p.org.access.log
+ * /var/log/nginx/64p.org.error.log
+
+Test
+====
+
+    curl -H 'Host: 64p.org' http://64p.org/
+
