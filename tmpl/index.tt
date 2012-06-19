@@ -5,7 +5,7 @@
         category => 'Web Application Frameworks',
         sites => [
             {
-                url => 'http://64p.org/menta/',
+                url => 'http://menta.64p.org/',
                 title => 'MENTA',
                 description => 'Web application framework for CGI',
             },
