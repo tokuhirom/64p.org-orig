@@ -10,8 +10,10 @@ psspss
 
 front に nginx をおいている。これで access log をとったり、なんだりしている。
 
-アプリケーションは Perl で書かれていて、Plack::Server::Standalone::Prefork::Server::Starter で処理している。
-PSSPSS における運用の詳細については id:kazuhooku による http://perl-users.jp/articles/advent-calendar/2009/hacker/23.html を参照のこと。
+アプリケーションは Perl で書かれていて、Starlet で処理している。
 
-nginx も psspss も daemontools の上でうごかしている。
+nginx も starlet も upstart の上でうごかしている。
 
+daemontools → supervisord → upstart と変遷しているが、upstart が一番楽な気がしている。
+
+see also http://d.hatena.ne.jp/tokuhirom/20120614/1339644848

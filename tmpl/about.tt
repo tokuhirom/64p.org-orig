@@ -21,13 +21,13 @@
 
 <h2>About this server</h2>
 <p>
-    64p.org works at my home.
-    Ther server is SC440(8GB memory), it contains:
+    64p.org works at sakura vps.
+    Ther server is sakura vps 2GB plan, it contains:
     <ul>
         <li>nginx for reverse proxy and delivery static contents</li>
         <li>many plack instance as application server on starlet</li>
         <li>mysql 5.5</li>
-        <li>perl 5.12.2</li>
+        <li>perl 5.16.0</li>
         <li>and a lot of CPAN modules, other OSSes.</li>
     </ul>
 </p>
