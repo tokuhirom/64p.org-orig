@@ -20,3 +20,10 @@ for name in *.htm ; do
   mv ${name%.htm}.html;
 done
 ||<
+
+* set
+
+set -e とすると、exit code が non-zero だとそこで死ぬので便利。autodie みたいなかんじ。
+
+set -x で、実行中のコマンドがみえる。@ECHO ON とおなじかんじ。
+
