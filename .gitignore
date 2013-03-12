@@ -6,3 +6,5 @@ MANIFEST
 nytprof.out
 development.db
 est.db
+static/npmrss.rss
+/static/tmp/
