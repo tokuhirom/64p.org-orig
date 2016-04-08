@@ -8,3 +8,5 @@ development.db
 est.db
 static/npmrss.rss
 /static/tmp/
+/.idea/
+*.iml
