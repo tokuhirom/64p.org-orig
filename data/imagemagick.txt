@@ -1,9 +1,0 @@
-imagemagick
-
-convert コマンドのつかいかたいつもわすれるのでメモ。でもこれおもいだす暇あったら Imager つかったほうがはやかったりするのであまり意味ない。
-
-* 縦反転
->||
-convert -flip foo.png bar.png
-||<
-

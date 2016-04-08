@@ -1,8 +1,0 @@
-ncftp
-
-FTP クライアントとしてつかいやすいので、FTP つかうときにはつかってる。
-
->||
-ncftpput -u USERNAME -p PASSWORD HOST  /path/to/remote/ upload-file
-||<
-

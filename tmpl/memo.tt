@@ -1,8 +1,0 @@
-[% WRAPPER 'include/layout.tt' WITH title = entry_title _ ' - 64p.org' %]
-
-<section>
-<h2>[% entry_title %]</h2>
-<div class="entry-body">[% body %]</div>
-</section>
-
-[% END %]

@@ -1,5 +1,0 @@
-postgresql
-
->||
-sudo -u postgres createdb foo
-||<
