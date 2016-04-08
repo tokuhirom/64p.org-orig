@@ -25,7 +25,7 @@
         [% content %]
     </div>
     <footer>
-        <p>Copyright (c) 2009-2011 64p.org. All rights reserved.</p>
+        <p>Copyright (c) 2009-2016 64p.org. All rights reserved.</p>
         <p>Powered by <a href="http://amon.64p.org/">Amon2</a></p>
     </footer>
 
