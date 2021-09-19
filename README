@@ -1,3 +1,13 @@
 This is a my home page repo.
 
 http://64p.org/
+
+# setup
+
+	sudo -uwww mkdir -p /home/www/logs/nginx/
+	sudo ln -s /snap/bin/certbot /usr/bin/certbot
+
+
+# let's encrypt
+
+	https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx
