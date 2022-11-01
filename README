@@ -2,12 +2,8 @@ This is a my home page repo.
 
 http://64p.org/
 
-# setup
+# run on local
 
-	sudo -uwww mkdir -p /home/www/logs/nginx/
-	sudo ln -s /snap/bin/certbot /usr/bin/certbot
+    docker build . --file Dockerfile --tag 64p.org:latest
 
 
-# let's encrypt
-
-	https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx
