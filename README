@@ -4,6 +4,7 @@ http://64p.org/
 
 # run on local
 
-    docker build . --file Dockerfile --tag 64p.org:latest
+    ./localdev/build.sh
+    ./localdev/run.sh
 
 
