@@ -1,46 +1,33 @@
-name: Docker Image CI
-
+name: Docker push(Sacloud)
 
 on:
   push:
-    branches: [ main ]
-
-env:
-  # Use docker.io for Docker Hub if empty
-  REGISTRY: ghcr.io
-  # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
-
+    branches: [main]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
-      - name: Log into registry ${{ env.REGISTRY }}
+      - name: Log into registry
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+        uses: docker/login-action@7ca345011ac4304463197fac0e56eab1bc7e6af0
         with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: tokuhirom.sakuracr.jp
+          username: publisher
+          password: ${{ secrets.SACLOUD_CONTAINER_REGISTRY_PASSWORD }}
 
-      # Extract metadata (tags, labels) for Docker
-      # https://github.com/docker/metadata-action
-      - name: check env
-        run: echo $REGISTRY/$IMAGE_NAME
+      - name: Build docker image
+        run: docker build -t tokuhirom.sakuracr.jp/tokuhirom/64p.org .
 
-      - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag $REGISTRY/$IMAGE_NAME:latest
-
-      # Build and push Docker image with Buildx (don't push on PR)
-      # https://github.com/docker/build-push-action
+      # Push the image
       - name: Build and push Docker image
-        run: docker push $REGISTRY/$IMAGE_NAME
+        run: docker push tokuhirom.sakuracr.jp/tokuhirom/64p.org:latest
